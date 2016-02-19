@@ -1,0 +1,24 @@
+<%= form_for :book, url: books_path do |f| %>
+  <p>
+    <%= f.label :cover %><br>
+  </p>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :author %><br>
+    <%= f.text_area :author %>
+  </p>
+ 
+  <p>
+    <%= f.label :quote %><br>
+    <%= f.text_area :quote %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
