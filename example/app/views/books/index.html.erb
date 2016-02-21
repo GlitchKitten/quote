@@ -1,2 +1,30 @@
-<h3>Home Page</h3> 
+<h3>The Quotable Library</h3> 
+
+<img src="http://covers.openlibrary.org/b/isbn/9780385533225-L.jpg" />
 <%= link_to 'New Book', new_book_path %>
+
+<br>
+    <% if @books.present? %>
+      <%= render @books %>
+    <% else %>
+      <p>There are no products containing the term(s) <%= params[:search] %>.</p>
+    <%end%>
+
+            <% Book.all.each do |p| %>         
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class = "thumbnail">
+                   <%= link_to p do %> 
+                      
+                     <%= image_tag("http://covers.openlibrary.org/b/isbn/#{p.isbn}-L.jpg")%>
+                   <%end%> 
+                  <div class = "caption">
+                      <p><strong><%= p.quote%></strong></p>       
+                      <p class = "btn btn-default" role = "button"><%= link_to 'More Detail', p %></p>
+                  </div>
+                </div> 
+              </div>  
+            <%end%>
+  <br>
+      
+
+ 

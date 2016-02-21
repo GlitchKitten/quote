@@ -10,11 +10,11 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     
     @book.save
-    redirect_to @book
+    redirect_to books_path
   end
   
   private
     def book_params
-      params.requite(:book).permit(:title, :author, :quote)
+      params.require(:book).permit(:title, :author, :quote, :isbn)
     end
 end

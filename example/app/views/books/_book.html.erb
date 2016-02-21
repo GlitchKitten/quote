@@ -1,0 +1,11 @@
+<div class="col-sm-6 col-md-4 col-lg-4">
+  <div class = "thumbnail">
+    <%= link_to book do %> 
+    <img src="http://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" />
+    <%end%> 
+    <div class = "caption">
+      <p><strong><%= book.quote%></strong></p>       
+      <p class = "btn btn-default" role = "button"><%= link_to 'More Detail', book %></p>
+    </div>
+  </div> 
+</div> 
