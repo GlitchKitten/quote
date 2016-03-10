@@ -9,9 +9,9 @@
       <p>There are no products containing the term(s) <%= params[:search] %>.</p>
     <%end%>
     
-    <div class = "featured_book">
+    <div class = "featured_book">   
       <div class = "featured_cover">
-        <%= Book.last.cover %>  
+        <%= image_tag("http://covers.openlibrary.org/b/isbn/#{Book.last.isbn}-L.jpg")%>
       </div>  
       <div class = "featured_quote">
         <%= Book.last.quote %>
