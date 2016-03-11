@@ -1,8 +1,10 @@
-<div class="col-sm-6 col-md-4 col-lg-4">
-  <div class = "thumbnail">
-    <%= link_to book do %> 
-      <%= image_tag("http://covers.openlibrary.org/b/isbn/#{p.isbn}-L.jpg")%>
-    <%end%> 
+<div class = "row">
+  <div class="col-sm-6 col-md-4 col-lg-4">
+    <div class = "cover_image">
+      <%= link_to book do %> 
+        <%= image_tag("http://covers.openlibrary.org/b/isbn/#{p.isbn}-M.jpg")%>
+      <%end%> 
+    </div>  
     <div class = "quote">
       <p><%= book.quote%></p>       
     </div>
@@ -12,5 +14,5 @@
     <div class = "author">
       <p><%=book.author%></p>
     </div>
-  </div> 
-</div> 
+  </div>
+</div>  

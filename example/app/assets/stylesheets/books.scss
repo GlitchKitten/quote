@@ -1,3 +1,21 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Header//
+header {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  font-size: 4em;
+  margin-top: 0;
+}
+
+//Featured Book//
+
+.featured_book li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  list-style: none;
+  padding: 1em 2em;
+}
