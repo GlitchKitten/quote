@@ -3,11 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //Header//
-header {
+header h1 {
   font-family: 'Amatic SC', cursive;
   text-align: center;
-  font-size: 4em;
-  margin-top: 0;
+  font-size: 6em;
 }
 
 //Featured Book//
@@ -18,4 +17,21 @@ header {
   float: left;
   list-style: none;
   padding: 1em 2em;
+}
+
+.featured_cover image_tag {
+  max-width: 100%;
+  height: auto;
+}
+.featured_quote {
+  font-size: 4em;
+}
+
+.featured_title {
+  font-size: 3em;
+  font-style: italic;  
+}
+
+.featured_author {
+  font-size: 3em;
 }

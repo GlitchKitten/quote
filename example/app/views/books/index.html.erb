@@ -1,31 +1,36 @@
 <%= link_to 'New Book', new_book_path %>
 
-<br>
-
 <div class = "row">  
   <div class="col-sm-12 col-md-12 col-lg-12">    
     <div class = "featured_book"> 
       <ul>
-        <li>
-          <div class = "featured_cover">
-            <%= image_tag("http://covers.openlibrary.org/b/isbn/#{Book.last.isbn}-L.jpg")%>
+        <div class = "row">
+          <div class="col-sm-12 col-md-4 col-lg-4">    
+          <li>
+            <div class = "featured_cover">
+              <%= image_tag("http://covers.openlibrary.org/b/isbn/#{Book.last.isbn}-L.jpg", :class => "img-responsive")%>
+            </div>
+          </li> 
+          </div>  
+          <div class="col-sm-12 col-md-8 col-lg-8"> 
+          <li>
+            <div class = "featured_quote">
+              <%= Book.last.quote %>
+            </div>
+          </li>
           </div>
-        </li>  
-        <li>
-          <div class = "featured_quote">
-            <%= Book.last.quote %>
-          </div>
-        </li>
-        <li>
-          <div class = "featured_title">
-            <%= Book.last.title %>   
-          </div>
-        </li>
-        <li>
-          <div class = "featured_author">
-            <%= Book.last.author %>   
-          </div>
-        </li>  
+          <div class="col-sm-12 col-md-8 col-lg-8">  
+          <li>
+            <div class = "featured_title">
+              <%= Book.last.title %> 
+            </div>
+          </li>
+          <li>
+            <div class = "featured_author">
+              <p> - <%= Book.last.author %> </p>   
+            </div>
+          </li>
+          </div>  
        </ul> 
     </div>
   </div>
@@ -34,7 +39,7 @@
     <% Book.all.each do |p| %>
       <div class = "cover_image">
         <%= link_to p do %> 
-          <%= image_tag("http://covers.openlibrary.org/b/isbn/#{p.isbn}-M.jpg")%>
+          <%= image_tag("http://covers.openlibrary.org/b/isbn/#{p.isbn}-M.jpg", :class => "img-responsive")%>
         <%end%> 
       </div>  
       <div class = "quote">
