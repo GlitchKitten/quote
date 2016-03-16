@@ -4,9 +4,12 @@
 
 //Header//
 header h1 {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  font-size: 6em;
+  font-size: 4em;
+  padding-bottom: .6em;
+  margin: .5em 1em 1em 1em;
+  border-bottom: 2px solid black;
 }
 
 //Featured Book//
@@ -19,12 +22,9 @@ header h1 {
   padding: 1em 2em;
 }
 
-.featured_cover image_tag {
-  max-width: 100%;
-  height: auto;
-}
 .featured_quote {
-  font-size: 4em;
+  font-size: 3em;
+  font-family: 'Oswald', sans-serif;
 }
 
 .featured_title {
