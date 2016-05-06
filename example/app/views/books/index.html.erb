@@ -1,3 +1,4 @@
+
 <div class = "row">  
   <div class="col-sm-12 col-md-12 col-lg-12">    
     <div class = "featured_book"> 
@@ -13,11 +14,11 @@
           <div class="col-sm-12 col-md-8 col-lg-8"> 
           <li>
             <div class = "featured_quote">
-              <%= Book.last.quote %>
+              <p>"<%= Book.last.quote %>"</p>
             </div>
           </li>
           </div>
-          <div class="col-sm-12 col-md-8 col-lg-8">  
+          <div class="col-sm-12 col-md-8 col-lg-8 source">  
           <li>
             <div class = "featured_title">
               <%= Book.last.title %> 
@@ -25,31 +26,42 @@
           </li>
           <li>
             <div class = "featured_author">
-              <p> - <%= Book.last.author %> </p>   
+              <p>- <%= Book.last.author %> </p>   
             </div>
           </li>
           </div>  
        </ul> 
     </div>
   </div>
-</div>  
+</div>
 
-    <% Book.all.each do |p| %>
-      <div class = "cover_image">
-        <%= link_to p do %> 
-          <%= image_tag("http://covers.openlibrary.org/b/isbn/#{p.isbn}-M.jpg", :class => "img-responsive")%>
-        <%end%> 
-      </div>  
-      <div class = "quote">
-        <p><%= p.quote%></p>       
-      </div>
-      <div>
-        <p><%=p.title%></p>
-      </div>
-      <div class = "author">
-        <p><%=p.author%></p>
-      </div>
-    <%end%>
+    <ul class = "image_list">
+      <% Book.all.each do |p| %>
+        <div class = "row">
+          <div class = "col-sm-12 col-md-4 col-lg-4"> 
+            <li>
+              <div class = "cover_image">
+                <%= link_to p do %> 
+                  <%= image_tag("http://covers.openlibrary.org/b/isbn/#{p.isbn}-M.jpg", :class => "img-responsive")%>
+                  <p class="text-content"><%=p.quote%></p>
+                <%end%> 
+              </div>  
+              <div class = "quote">
+                <p><%= p.quote%></p>       
+              </div>
+              <div>
+                <p><%= p.title%></p>
+              </div>
+              <div class = "author">
+                <p><%= p.author%></p>
+              </div>
+            </li>
+          </div>
+        </div> 
+      <%end%>
+    </ul>
+  </div>
+ </div>  
 
 <%= link_to 'New Book', new_book_path %>    
 

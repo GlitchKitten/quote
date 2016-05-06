@@ -9,7 +9,7 @@ header h1 {
   font-size: 4em;
   padding-bottom: .6em;
   margin: .5em 1em 1em 1em;
-  border-bottom: 2px solid black;
+  border-bottom: 1.5px solid black;
 }
 
 //Featured Book//
@@ -17,21 +17,64 @@ header h1 {
 .featured_book li {
   position: relative;
   display: inline-block;
-  float: left;
+  float: right;
   list-style: none;
   padding: 1em 2em;
 }
 
 .featured_quote {
-  font-size: 3em;
-  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  font-family: 'Fauna One', serif;
 }
 
 .featured_title {
   font-size: 3em;
-  font-style: italic;  
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
 }
 
 .featured_author {
   font-size: 3em;
+  font-family: 'Fauna One', serif;
+}
+
+ul.image_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  float: left;
+}
+
+ul.image_list li {
+  display: inline-block;
+  height: 150px;
+  margin: 1em;
+}
+
+p.text-content {
+  background: rgba(0,0,0,.75);
+  color: white;
+  cursor: pointer;
+  display: table;
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 320px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+ul.image_list li:hover p.text-content {
+  opacity: 1;
+}
+
+p.text-content p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }

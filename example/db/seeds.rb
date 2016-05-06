@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+books = Book.create([{title: 'Therese Raquin', author: 'Emile Zola', quote: 'She thought of her lover as being like a dog that would guard and protect her. Her cool, calm skin felt no shudder of desire.', isbn: '9782070418008'}])
