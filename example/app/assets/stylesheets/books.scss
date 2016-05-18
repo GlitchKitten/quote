@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //Header//
-header h1 {
+#title {
+  display: block;
   font-family: 'Playfair Display', serif;
   text-align: center;
   font-size: 4em;
   padding-bottom: .6em;
   margin: .5em 1em 1em 1em;
   border-bottom: 1.5px solid black;
+  text-decoration: none;
+  color: black;
 }
 
 //Featured Book//
