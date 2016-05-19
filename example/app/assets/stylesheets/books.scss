@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //Header//
-#title {
+#site_title {
   display: block;
   font-family: 'Playfair Display', serif;
   text-align: center;
@@ -17,10 +17,14 @@
 
 //Featured Book//
 
+.featured_cover {
+  float: left;
+  height: 100%;
+}
+
 .featured_book li {
   position: relative;
   display: inline-block;
-  float: right;
   list-style: none;
   padding: 1em 2em;
 }
@@ -41,43 +45,29 @@
   font-family: 'Fauna One', serif;
 }
 
-ul.image_list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  float: left;
-}
+//Book List//
 
-ul.image_list li {
+.book_list li {
+  position: relative;
   display: inline-block;
-  height: 150px;
-  margin: 1em;
+  list-style: none;
+  padding: 1em 2em;
 }
 
-p.text-content {
-  background: rgba(0,0,0,.75);
-  color: white;
-  cursor: pointer;
-  display: table;
-  left: 0;
-  position: absolute;
-  top: 0;
-  height: 320px;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
+.cover_image {
+  height: 50%;
+  width: 50%;
 }
 
-ul.image_list li:hover p.text-content {
-  opacity: 1;
+.quote {
+  font-family: 'Fauna One', serif;
 }
 
-p.text-content p {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+.title {
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
+}
+
+.author {
+  font-family: 'Fauna One', serif;
 }

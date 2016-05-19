@@ -17,7 +17,7 @@
             </div>
           </li>
           </div>
-          <div class="col-sm-12 col-md-8 col-lg-8 source">  
+          <div class="col-sm-12 col-md-8 col-lg-8">  
           <li>
             <div class = "featured_title">
               <%= Book.last.title %> 
@@ -34,33 +34,7 @@
   </div>
 </div>
 
-    <ul class = "image_list">
-      <% Book.all.each do |p| %>
-        <div class = "row">
-          <div class = "col-sm-12 col-md-4 col-lg-4"> 
-            <li>
-              <div class = "cover_image">
-                <%= link_to p do %> 
-                  <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive")%>
-                  <p class="text-content"><%=p.quote%></p>
-                <%end%> 
-              </div>  
-              <div class = "quote">
-                <p><%= p.quote%></p>       
-              </div>
-              <div>
-                <p><%= p.title%></p>
-              </div>
-              <div class = "author">
-                <p><%= p.author%></p>
-              </div>
-            </li>
-          </div>
-        </div> 
-      <%end%>
-    </ul>
-  </div>
- </div>  
+<%= render @books %>
 
 <%= link_to 'New Book', new_book_path %>    
 

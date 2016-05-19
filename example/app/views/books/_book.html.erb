@@ -1,19 +1,38 @@
- 
+<div class = "book_list">
+
+  <ul>
   <div class = "row">
-    <div class="col-sm-6 col-md-4 col-lg-4">
-      <div class = "cover_image">
+    <div class="col-sm-12 col-md-4 col-lg-4">   
+      <li>
+        <div class = "cover_image">
         <%= link_to book do %> 
           <%= image_tag("http://images.amazon.com/images/P/#{book.isbn}.jpg", :class => "img-responsive")%>
         <%end%> 
-      </div>  
-      <div class = "quote">
-        <p><%= book.quote%></p>       
-      </div>
-      <div>
-        <p><%= book.title%></p>
-      </div>
-      <div class = "author">
-        <p><%= book.author%></p>
-      </div>
+        </div>
+      </li>  
     </div>
+        
+    <div class="col-sm-12 col-md-8 col-lg-8">   
+      <li>
+        <div class = "quote">
+          <p><%= book.quote%></p>       
+        </div>
+      </li>
+    </div>
+    
+    <div class="col-sm-12 col-md-8 col-lg-8">   
+        <li>
+          <div class = "title">
+            <p><%= book.title%></p>
+          </div>
+        </li>
+        <li>
+          <div class = "author">
+            <p><%= book.author%></p>
+          </div>
+        </li>
+    </div>  
   </div>
+  
+  </ul>   
+</div>
