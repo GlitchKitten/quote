@@ -3,21 +3,21 @@
     <div class = "featured_book"> 
       <ul>
         <div class = "row">
-          <div class="col-sm-12 col-md-4 col-lg-4">    
+          <div class="col-sm-12 col-md-4 col-lg-5">    
           <li>
             <div class = "featured_cover">
               <%= image_tag("http://images.amazon.com/images/P/#{Book.last.isbn}.jpg", :class => "img-responsive")%>
             </div>
           </li> 
           </div>  
-          <div class="col-sm-12 col-md-8 col-lg-8"> 
+          <div class="col-sm-12 col-md-8 col-lg-7"> 
           <li>
             <div class = "featured_quote">
               <p>"<%= Book.last.quote %>"</p>
             </div>
           </li>
           </div>
-          <div class="col-sm-12 col-md-8 col-lg-8">  
+          <div class="col-sm-12 col-md-8 col-lg-7">  
           <li>
             <div class = "featured_title">
               <%= Book.last.title %> 
@@ -25,7 +25,7 @@
           </li>
           <li>
             <div class = "featured_author">
-              <p>- <%= Book.last.author %> </p>   
+              <p><%= Book.last.author %> </p>   
             </div>
           </li>
           </div>  
