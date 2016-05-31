@@ -30,44 +30,56 @@
 }
 
 .featured_quote {
-  font-size: 2.25em;
+  font-size: 2em;
   font-family: 'Fauna One', serif;
+  padding-top: 1em;
 }
 
 .featured_title {
-  font-size: 4em;
+  font-size: 3em;
   font-style: italic;
   font-family: 'Oswald', sans-serif;
 }
 
 .featured_author {
-  font-size: 2.5em;
+  font-size: 2em;
   font-family: 'Fauna One', serif;
 }
 
 //Book List//
+.pics {
+  margin: 0 auto;
+  padding-left: 4em;
+}
+
+.index_images {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1em;
+}
 
 .book_list li {
   position: relative;
-  display: inline-block;
   list-style: none;
-  padding: 1em 2em;
-}
-
-.cover_image {
-  height: 75%;
-  width: 75%;
+  float: left;
+  display: inline-block;
+  margin: 1em;
+  margin-right: 2em;
 }
 
 .quote {
   font-family: 'Fauna One', serif;
+  font-size: 1.5em;
 }
 
 .title {
   font-style: italic;
   font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
 }
 
 .author {
   font-family: 'Fauna One', serif;
+  font-size: 1.5em;
 }
