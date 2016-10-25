@@ -28,7 +28,35 @@
   <body>
     <%= yield %>
   </body>
+  
   <footer>
-    <p>Amber Mulholland</p>
-  </footer>  
+    <div class = "social_media"> 
+      <ul>
+        <li><a href = "https://www.ambermulholland.com/">ambermulholland.com</a></li>
+        <li><a href = "https://www.goodreads.com/user/show/4281466-amber-haschenburger">Stalk my library!</a></li>
+      </ul>  
+    </div>  
+    <div class = "copyright">
+      <li><p> &copy; <span id="copyright"> 2015 </span> Amber Mulholland</p></li>
+    </div>
+  </footer>
+      
+  <script>
+    var thisYear  = new Date().getFullYear(),
+        startYear = '2015';
+    if (thisYear > startYear) { $('#copyright').text(startYear + '-' + thisYear); }
+  </script>  
+
+  <script type = "text/javascript">
+    var $root = $('html, body');
+      $('.navbar-nav a').click(function(){
+        var href = $.attr(this, 'href');
+        $root.animate({
+          scrollTop: $(href).offset().top
+        }, 500, function(){
+          window.location.hash=href;
+        });
+        return false;
+      });
+    </script>
 </html>
