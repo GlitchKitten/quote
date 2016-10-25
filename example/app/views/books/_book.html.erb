@@ -3,11 +3,12 @@
   <div class = "row">
     <div class="col-sm-12 col-md-5 col-lg-4">   
       <li>
-        <div class = "cover_image">
         <%= link_to book do %> 
           <%= image_tag("http://images.amazon.com/images/P/#{book.isbn}.jpg", :class => "img-responsive")%>
+            <div class = "quote imgDescription">
+              <p><%= book.quote%></p>       
+            </div>
         <%end%> 
-        </div>
       </li>  
     </div>
         

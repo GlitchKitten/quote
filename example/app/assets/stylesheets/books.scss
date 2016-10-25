@@ -33,6 +33,7 @@
   font-size: 2em;
   font-family: 'Fauna One', serif;
   padding-top: 1em;
+  margin-right: 1em;
 }
 
 .featured_title {
@@ -44,6 +45,7 @@
 .featured_author {
   font-size: 2em;
   font-family: 'Fauna One', serif;
+  font-weight: bold;
 }
 
 //Book List//
@@ -61,11 +63,9 @@
 
 .book_list li {
   position: relative;
-  list-style: none;
-  float: left;
   display: inline-block;
-  margin: 1em;
-  margin-right: 2em;
+  margin: 0 auto;
+  padding: 1em;
 }
 
 .quote {
@@ -82,4 +82,42 @@
 .author {
   font-family: 'Fauna One', serif;
   font-size: 1.5em;
+}
+
+.imgWrap {
+  position: relative;
+}
+
+.imgDescription {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(61,57,57,0.75);
+  color: #fff;
+  visibility: hidden;
+  -webkit-transition: visibility opacity 0.2s;
+}
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  z-index: 1;
+}
+
+.hover_text {
+  margin: 25px;
+}
+
+.hover_quote {
+  
+}
+
+.hover_title {
+  
+}
+
+.hover_author {
+  
 }
