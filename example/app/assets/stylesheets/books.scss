@@ -8,7 +8,7 @@
   font-family: 'Trirong', sans-serif;
   text-align: center;
   font-size: 4.75em;
-  padding-bottom: .6em;
+  padding-bottom: .25em;
   margin: .5em 1em 1em 1em;
   border-bottom: 1.5px solid black;
   text-decoration: none;
@@ -18,27 +18,17 @@
 
 //Featured Book//
 
-.featured_cover {
-  float: left;
-  height: 100%;
-}
-
-.featured_book li {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-  padding: 1em 2em;
+.featured_book {
+  margin: 0 auto;
+  padding-bottom: 2em;
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 .featured_quote {
   font-size: 2.7em;
   font-family: 'Raleway', sans-serif;
-  padding-top: 1em;
-  margin-right: 1em;
-}
-
-.featured_info p {
-  display: inline;
+  padding-top: 1.5em;
 }
 
 .featured_title {
@@ -53,10 +43,21 @@
   font-weight: bold;
 }
 
+.featured_info {
+  position: relative;
+  float: right;
+  padding-bottom: 1em;
+}
+
 //Book List//
+
+.row{
+  margin: 0 auto;
+}
+
 .pics {
   margin: 0 auto;
-  padding-left: 4em;
+  text-align: center;
 }
 
 .index_images {
@@ -76,6 +77,7 @@
 .quote {
   font-family: 'Fauna One', serif;
   font-size: 1.5em;
+  text-align: left;
 }
 
 .title {

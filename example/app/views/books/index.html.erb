@@ -1,32 +1,11 @@
-<div class = "row">  
-  <div class="col-sm-12 col-md-12 col-lg-12">    
-    <div class = "featured_book"> 
-      <ul>
-        <div class = "row">
-          <div class="col-sm-12 col-md-5 col-lg-4">    
-          <li>
-            <div class = "featured_cover">
-              <%= image_tag("http://images.amazon.com/images/P/#{Book.last.isbn}.jpg", :class => "img-responsive") %>
-            </div>
-          </li> 
-          </div>  
-          <div class="col-sm-12 col-md-7 col-lg-8"> 
-          <li>
-            <div class = "featured_quote">
-              <p>"<%= Book.last.quote %>"</p>
-            </div>
-          </li>
-          </div>
-          <div class="col-sm-12 col-md-7 col-lg-8">  
-          <li>
-            <div class = "featured_info">
-              <p class = "featured_title"><%= Book.last.title %> </p> 
-              <p class = "featured_author"> | <%= Book.last.author %></p>  
-            </div>
-          </li>
-          
-          </div>  
-       </ul> 
+<div class = "featured_book"> 
+  <div class = "row">
+    <div class = "featured_quote">
+      <p>"<%= Book.last.quote %>"</p>
+    </div>
+    <div class = "featured_info">
+      <p class = "featured_title"><%= Book.last.title %> </p> 
+      <p class = "featured_author"><%= Book.last.author %></p>  
     </div>
   </div>
 </div>
@@ -35,7 +14,7 @@
   <% Book.all.each do |p| %>
     <div class = "index_images imgWrap">
       <%= link_to p do %> 
-        <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive")%>
+        <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive center-block")%>
         <div class = "quote imgDescription">
           <div class = "hover_text">
             <p class = "quote hover_quote"><%= p.quote%></p>       
