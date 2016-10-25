@@ -19,15 +19,12 @@
           </div>
           <div class="col-sm-12 col-md-7 col-lg-8">  
           <li>
-            <div class = "featured_title">
-              <%= Book.last.title %>  
+            <div class = "featured_info">
+              <p class = "featured_title"><%= Book.last.title %> </p> 
+              <p class = "featured_author"> | <%= Book.last.author %></p>  
             </div>
           </li>
-          <li>
-            <div class = "featured_author">
-              <p>-<%= Book.last.author %></p>   
-            </div>
-          </li>
+          
           </div>  
        </ul> 
     </div>
@@ -38,12 +35,12 @@
   <% Book.all.each do |p| %>
     <div class = "index_images imgWrap">
       <%= link_to p do %> 
-        <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive imgWrap")%>
+        <%= image_tag("http://images.amazon.com/images/P/#{p.isbn}.jpg", :class => "img-responsive")%>
         <div class = "quote imgDescription">
           <div class = "hover_text">
-          <p class = "hover_quote"><%= p.quote%></p>       
-          <p class = "hover_title"><%= p.title%></p>
-          <p class = "hover_author"><%= p.author%></p>
+            <p class = "quote hover_quote"><%= p.quote%></p>       
+            <p class = "title hover_title"><%= p.title%></p>
+            <p class = "author hover_author"><%= p.author%></p>
           </div>  
         </div>
       <%end%>

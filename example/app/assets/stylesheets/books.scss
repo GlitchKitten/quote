@@ -5,14 +5,15 @@
 //Header//
 #site_title {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Trirong', sans-serif;
   text-align: center;
-  font-size: 4em;
+  font-size: 4.75em;
   padding-bottom: .6em;
   margin: .5em 1em 1em 1em;
   border-bottom: 1.5px solid black;
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 //Featured Book//
@@ -30,21 +31,25 @@
 }
 
 .featured_quote {
-  font-size: 2em;
-  font-family: 'Fauna One', serif;
+  font-size: 2.7em;
+  font-family: 'Raleway', sans-serif;
   padding-top: 1em;
   margin-right: 1em;
 }
 
+.featured_info p {
+  display: inline;
+}
+
 .featured_title {
-  font-size: 3em;
+  font-size: 2.7em;
   font-style: italic;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Trirong', serif;
 }
 
 .featured_author {
-  font-size: 2em;
-  font-family: 'Fauna One', serif;
+  font-size: 2.8em;
+  font-family: 'Trirong', serif;
   font-weight: bold;
 }
 
@@ -84,6 +89,9 @@
   font-size: 1.5em;
 }
 
+.info p {
+  display: inline;
+}
 .imgWrap {
   position: relative;
 }
@@ -95,7 +103,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(61,57,57,0.75);
+  background: rgba(61,57,57,.9);
   color: #fff;
   visibility: hidden;
   -webkit-transition: visibility opacity 0.2s;
@@ -111,13 +119,14 @@
 }
 
 .hover_quote {
-  
+  font-size: .8em;
 }
 
 .hover_title {
-  
+  padding-top: 10px;
+  font-size: .9em;
 }
 
 .hover_author {
-  
+  font-size: .9em;
 }
